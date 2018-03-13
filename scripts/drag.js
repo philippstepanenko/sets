@@ -29,18 +29,14 @@ function mousedown(e) {
     elem.parentNode.parentNode.style.top = e.pageY - cy - shiftY + 'px';
   }
 
-  document.onmousemove = function(e) {
-    moveAt(e);
-  };
+  document.onmousemove = (e) => moveAt(e);
 
   document.onmouseup = function() {
     document.onmousemove = null;
     elem.onmouseup = null;
   };
 
-  elem.ondragstart = function() {
-  return false;
-	};
+  elem.ondragstart = () => false;
 
 	function getCoords(elem) {
   var box = elem.getBoundingClientRect();
