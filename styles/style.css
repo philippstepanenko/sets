@@ -1,0 +1,149 @@
+:root{
+	--color1: #ffffff;
+	--color2: #000000;
+	--color3: #fb0000;
+	--color4: #00bb00;
+	--color5: #7777ff;
+	--color6: #d0d0d0;
+	
+	--font-size1: 24px;
+	--font-size2: 11px;
+	--font-size3: 15px;
+
+  --marker-on: var(--color5);
+  --marker-off: var(--color6);
+
+  --button-size: 30px;
+
+  --select-on: url("../src/select.png");
+}
+
+body{
+	font-family: monospace;
+	font-size: var(--font-size1);
+	color: var(--color2);
+	background-color: var(--color1);
+}
+
+#header,h2{
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+#left,#right{
+	cursor: move;
+}
+
+#left:hover,#right:hover{
+	background-color: var(--color5);
+	color: var(--color1);
+}
+
+.block{
+	min-width: 400px;
+  min-height: 100px;
+  width: auto;
+	padding: 0% calc(var(--button-size) * 2) 0% var(--button-size);
+	white-space: nowrap;
+	top: 150px;
+	background-color: var(--color1);
+	border: 2px solid var(--color2);
+	position: absolute;
+	cursor: default;
+}
+
+#left-block{
+	left:150px;
+}
+
+#right-block{
+	left:700px;
+}
+
+input{
+	font-family: monospace;
+	font-size: var(--font-size1);
+	border: 0px;
+	text-align: center;
+	width: 14px;
+	outline: none;
+	color: var(--color2);
+	background-color: var(--color1);
+}
+
+input:hover,input:focus{
+	background-color: var(--color5);
+	border-style: var(--color2);
+	color: var(--color1); 
+}
+
+select{
+	width: 40px;
+	border: 0px;
+	font-family: monospace;
+	font-size: var(--font-size1);
+	text-align: center;
+	outline:none;
+	color: var(--color2);
+	background-color: var(--color1);
+	
+	padding: 0px calc(var(--button-size) / 3) 0px calc(var(--button-size) / 6);
+	
+	background-position: right;
+  background-repeat: no-repeat; 
+
+	-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select:hover,select:focus{
+	color: var(--color1);
+	background-color: var(--color5);
+	background-image: var(--select-on);
+}
+
+button{
+	outline: none;
+	border: 3px solid var(--color2);
+	width: var(--button-size);
+	height: var(--button-size);
+	position: absolute;
+	margin: 2px;
+	font-weight: 900;
+}
+
+.add{
+	font-size: var(--font-size3);
+}
+
+.del{
+	font-size: var(--font-size2);
+}
+.del,.add{	
+	background-color:var(--color1);
+	color: var(--color2);
+}
+
+.add:hover, .del:hover{
+	color: var(--color1);
+}
+
+.del:hover{
+	background-color:var(--color3);
+}
+
+.add:hover{	
+	background-color: var(--color4);
+}
+
+.marker{ 
+  color: var(--marker-off);
+  cursor: cell;
+}
+
+.marker:hover{
+  color: var(--marker-on); 
+}
